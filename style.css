@@ -1,10 +1,40 @@
-const needle = document.getElementById('needle');
-
-function updateNeedle(probability) {
-    // Convert the probability to an angle between -45 and 45 degrees
-    const angle = (probability - 0.5) * 90;
-    needle.style.transform = `rotate(${angle}deg)`;
-}
-
-// Example usage: Update the needle based on a probability (0 to 1)
-updateNeedle(-.08); // Adjust this value to see the needle move
+* {
+    font-family: Georgia;
+  }
+  
+  .needle-container {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 150px;
+      width: 300px;
+      border-radius: 150px 150px 0 0;
+      background-color: rgba(0,0,255,0.2);
+  }
+  
+  .needle {
+      width: 3px;
+      height: 150px;
+      background-color: red;
+      position: absolute;
+      left: 50%;
+      transform: rotate(0deg);
+      transform-origin: bottom;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .VL {
+      position: absolute;
+      top: 26%;
+      left: 71%;
+  }
+  
+  .NL {
+    position: absolute;
+    top: 26%;
+    left: 20%;
+  }
